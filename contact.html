@@ -4,16 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US</title>
+    <title>Services</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: #000080;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+        }
+
+        .nav-area {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-area li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-area li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            transition: 0.3s ease;
+        }
+
+        /* Dropdown Menu */
+        .nav-area .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 150px;
+            top: 30px;
+            left: 0;
+            border-radius: 5px;
+        }
+
+        .nav-area li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            padding: 10px;
+        }
+
+        .dropdown li a {
+            color: #ff416c;
+        }
+
+        .nav-area li a:hover {
+            background: white;
+            color: #ff416c;
+            border-radius: 20px;
+        }
+
+        /* Hero Section */
+        .hero-text {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .service-card h2 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-about, .footer-links, .footer-contact {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+        }
+
+        .footer-about h3, .footer-links h3, .footer-contact h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ff416c;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin: 10px 0;
+        }
+
+        .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ff416c;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            transition: 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<style>
-    /* Same CSS styles, no changes */
-</style>
 
 <body>
-
-    <header1>
+    <header>
         <div class="logo">
             <img src="folder/logo.PNG" alt="Cates Branding">
         </div>
@@ -33,71 +238,85 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header1>
+    </header>
 
-    <body>
+    <div class="hero-text">
+        <h1>Cate’s Branding Services</h1>
+    </div>
 
-        <header>
-            <h2>Contact Us</h2>
-            <p>Have a question? We’d love to hear from you.</p>
-        </header>
-        <style>
-            /* Same styles for the contact section */
-        </style>
-
-        <!-- Contact Us Section -->
-        <section id="contact" class="contact">
-            <form action="contact.html" method="post">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
-
-    </body>
-</html>
-
-<style>
-    /* Same styles for the footer */
-</style>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-about">
-            <h3>About Cate’s Branding</h3>
-            <p>We are a leading branding agency specializing in brand identity, PR, IT solutions, and multimedia services.</p>
+    <section class="services-container">
+        <div class="service-card">
+            <div class="icon">🎨</div>
+            <h2>Brand Identity & Design</h2>
+            <p>We craft legendary visual assets that capture your story and set you apart.</p>
         </div>
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="service-card">
+            <div class="icon">📊</div>
+            <h2>Comprehensive Brand Strategy</h2>
+            <p>Data-driven market positioning to ensure your brand dominates every platform.</p>
         </div>
-        <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <p>Email: info@catesbranding.com</p>
-            <p>Phone: +268 76143711/79748760</p>
-            <div class="social-icons">
-                <a href="#"><img src="folder/Facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="folder/WhatsApp.png" alt="Twitter"></a>
-                <a href="#"><img src="folder/Instagram.jpeg" alt="Instagram"></a>
-                <a href="#"><img src="folder/download-17.png" alt="LinkedIn"></a>
+        <div class="service-card">
+            <div class="icon">🎤</div>
+            <h2>Event & Campaign Branding</h2>
+            <p>We design materials that turn your products into the talk of the town.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">🛡️</div>
+            <h2>Reputation Management</h2>
+            <p>We turn crises into opportunities, strengthening your brand’s integrity.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">💻</div>
+            <h2>Web & App Development</h2>
+            <p>We create responsive websites and game-changing apps for SMEs and enterprises.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">🔐</div>
+            <h2>Cybersecurity & Data Management</h2>
+            <p>Robust security solutions to protect your valuable digital assets.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">🖼️</div>
+            <h2>Visual Content Design</h2>
+            <p>We create social media graphics, infographics, and investor-ready proposals.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">🎞️</div>
+            <h2>Motion Graphics & Animation</h2>
+            <p>Engaging 2D/3D animations for brand storytelling and explainer videos.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Cate’s Branding</h3>
+                <p>We are a leading branding agency specializing in brand identity, PR, IT solutions, and multimedia services.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@catesbranding.com</p>
+                <p>Phone: +268 76143711/79748760</p>
+                <div class="social-icons">
+                    <a href="#"><img src="folder/Facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="folder/WhatsApp.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="folder/Instagram.jpeg" alt="Instagram"></a>
+                    <a href="#"><img src="folder/download-17.png" alt="LinkedIn"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <p class="footer-bottom">&copy; 2025 Cate’s Branding. All Rights Reserved.</p>
-</footer>
+        <p class="footer-bottom">&copy; 2025 Cate’s Branding. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
