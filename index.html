@@ -197,8 +197,49 @@ nav {
         margin-bottom: 10px;
     }
 }
+    .menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive nav for mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .nav-area {
+        display: none;
+        flex-direction: column;
+        background-color: #000080;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .nav-area.active {
+        display: flex;
+    }
+
+    .nav-area li {
+        margin: 10px 0;
+    }
+}
 </style>
 <body>
+    <div class="menu-toggle" id="menu-toggle">
+    &#9776; <!-- This is the hamburger icon -->
+</div>
 
     <header>
         <div class="logo">
@@ -230,7 +271,14 @@ nav {
    
         </div>
     </header>
-    
+    <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const nav = document.querySelector('.nav-area');
+
+    toggleBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
     
     
 
