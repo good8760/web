@@ -6,92 +6,467 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<style>
-    /* All styles remain unchanged */
-</style>
 
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+/* Header */
+header1 {
+     background: #000080;
+   height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-area {
+    list-style: none;
+    display: flex;
+}
+
+.nav-area li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-area li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+/* Dropdown Menu */
+.nav-area .dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    top: 30px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.nav-area li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: #ff416c;
+}
+
+.nav-area li a:hover {
+    background: white;
+    color: #ff416c;
+    border-radius: 20px;
+}
+
+/* Hero Text */
+.hero-text {
+    margin-top: 50px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #ff416c;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #ff416c;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    text-align: center;
+    background: #121212;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Service Card */
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #ff416c;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-area {
+        flex-direction: column;
+    }
+
+    .nav-area li {
+        margin-bottom: 10px;
+    }
+}
+</style>
 <body>
 
     <header1>
         <div class="logo">
-            <img src="folder/logo.PNG" alt="Cates Branding">
+            <img src="folder/Capture1.PNG" alt="Cates Branding">
         </div>
-        <nav>
+      <nav>
             <ul class="nav-area">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Public Relations</a></li>
-                        <li><a href="#">Information Technology</a></li>
-                        <li><a href="#">Multimedia</a></li>
+                <li><a href="home12.php">Home</a></li>
+                <li><a href="services.php">Services</a>
+                     <ul class="dropdown">
+                        <li><a href="brandingandrebranding.php">Branding</a></li>
+                        <li><a href="Public Relation and Media.php">Public Relations</a></li>
+                        <li><a href="informationTech.php">Information Technology</a></li>
+                        <li><a href="MultimediaServices.php">Multimedia</a></li>
                     </ul>
                 </li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="team.php">Our Team</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
+
+       
     </header1>
+    
+<body>
 
-    <header>
-        <h2>About Us</h2>
-        <p>Learn more About Cate's Branding</p>
-    </header>
+    <html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>About us</title>
+    </head>
+    
+        
+     
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    <style>
-        /* All styles remain unchanged */
+/* Body */
+body {
+    background-color: #000; /* Black background */
+    color: #FFDB58; /* Mustard text */
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: #FFDB58;
+    background-color: #000080; /* Navy Blue */
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+    color: #fff;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.abt-col {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: #fff;
+    color: #000080;
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.abt-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 219, 88, 0.3);
+    background-color: #ffdb58;
+    color: #000;
+}
+
+.abt-col h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #000080;
+}
+
+.abt-col p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abt-col {
+        margin-bottom: 20px;
+    }
+}
+     
     </style>
+  
+   
 
-    <section class="about">
-        <h1>About Us</h1>
-        <p>
-            Cate's Branding is a dynamic, multi-service agency committed to empowering businesses of every size in Eswatini.
-            Built on a powerful partnership of creative professionals and industry experts, we offer a comprehensive suite
-            of innovative branding, IT, multimedia, public relations, and media relations solutions. Capitalizing on our
-            deep understanding of the Eswatini market and dedication to tailored services, Cate's Branding is the go-to
-            agency for businesses seeking creative, effective, and productive solutions. We are also committed to providing
-            innovative technological and branding solutions for the government to significantly improve Eswatini’s image.
-        </p>
-        <div class="row">
-            <div class="abt-col">
-                <h2>Mission</h2>
-                <p>Our mission is to provide integrated branding, technology, and communication solutions, creating clear
-                    and strategic roadmaps that empower Eswatini businesses to achieve exceptional results and build a
-                    lasting, thriving community.</p>
-            </div>
-            <div class="abt-col">
-                <h2>Vision</h2>
-                <p>Our vision is to be the leading branding and communications provider in Eswatini, driving business growth
-                    and contributing to the nation’s economic success.</p>
-            </div>
-            <div class="abt-col">
-                <h2>Mission</h2>
-                <p>BRANDING YOU TO SHINE</p>
-            </div>
+<section class="about-hero">
+    <h1>About Us</h1>
+    <p>
+        Cate's Branding is a dynamic, multi-service agency committed to empowering businesses of every size in Eswatini.
+        We offer a comprehensive suite of innovative branding, IT, multimedia, public relations and media solutions.
+        Backed by deep understanding of the Eswatini market, we deliver tailored services to both businesses and government.
+    </p>
+</section>
+
+<section class="about-section">
+    <div class="row">
+        <div class="abt-col">
+            <h2>Our Mission</h2>
+            <p>
+                To provide integrated branding, technology, and communication solutions that empower Eswatini businesses to
+                achieve exceptional results and build a thriving community.
+            </p>
         </div>
-    </section>
+        <div class="abt-col">
+            <h2>Our Vision</h2>
+            <p>
+                To be the leading branding and communications provider in Eswatini, driving business growth and contributing to the nation’s economic success.
+            </p>
+        </div>
+        <div class="abt-col">
+            <h2>Our Motto</h2>
+            <p>Branding You to Shine</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+   
+
 
     <!-- Footer Section -->
+    <style>
+        footer {
+    background: #1a1a2e;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-about h3, .footer-links h3, .footer-contact h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ff416c;
+}
+
+.footer-about p, .footer-contact p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff416c;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+        
+    </style>
     <footer>
         <div class="footer-container">
             <div class="footer-about">
                 <h3>About Cate’s Branding</h3>
-                <p>We are a leading branding agency specializing in brand identity, PR, IT solutions, and multimedia
-                    services.</p>
+                <p>We are a leading branding agency specializing in brand identity, PR, IT solutions, and multimedia services.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="team.php">Our Team</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
+              <div class="footer-contact">
                 <h3>Contact Us</h3>
                 <p>Email: info@catesbranding.com</p>
                 <p>Phone: +268 76143711/79748760</p>
@@ -106,6 +481,9 @@
         <p class="footer-bottom">&copy; 2025 Cate’s Branding. All Rights Reserved.</p>
     </footer>
 
-</body>
-
 </html>
+
+
+
+
+
