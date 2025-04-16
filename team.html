@@ -257,128 +257,182 @@ header {
  
     </header>
 
-    <!-- Team Section -->
-    <section class="team">
-        <div class="team-container">
-            <?php
-            
-            $team = [
-                ["CEO", "Sizolwethu Lukhele", "good.jpg", " Sizolwethu Lukhele leads our team  in branding."],
-                ["Managing Director", "Mcebo Sfundza ", "good.jpg", "Mcebo Sfundza drives innovative marketing strategies for growth."],
-                ["IT Specialist", "Welcome Mdluli", "good.jpg", "Welcome ensures top-notch digital solutions and security."],
-                ["IT Specialist", "Mbongiseni Masiimula", "good.jpg", "Mbongiseni ensures top-notch digital solutions and security."],
-                ["Designers ", "Luhlelolwenkhosi Mnisi", "good.jpg", " Luhlelolwenkhosi turns ideas into stunning visual masterpieces."],
-                 ["Designers ", "Takhona Magongo", "good.jpg", " . Takhona turns ideas into stunning visual masterpieces."],
-                ["Public Relations ", "Sizolwethu Lukhele", "good.jpg", " Sizolwethu manages communication and brand reputation."],
-            ];
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team - Cate’s Branding</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
 
-           
-            foreach ($team as $member) {
-                echo "
-                <div class='team-card'>
-                    <div class='team-img'>
-                        <img src='folder/{$member[2]}' alt='{$member[1]}'>
-                    </div>
-                    <h3>{$member[1]}</h3>
-                    <h4>{$member[0]}</h4>
-                    <p>{$member[3]}</p>
-                </div>
-                ";
-            }
-            ?>
-        </div>
-    </section>
+    /* Team Section */
+    .team {
+      background: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-</body>
-</html>
-<style>
-/* Team Section */
-.team {
-    background: #f8f9fa;
-    padding: 60px 20px;
-    text-align: center;
-}
+    .team h1 {
+      font-size: 36px;
+      color: #ff416c;
+      margin-bottom: 10px;
+    }
 
-.team h1 {
-    font-size: 36px;
-    color: #ff416c;
-    margin-bottom: 10px;
-}
+    .team p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
 
-.team p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #555;
-}
-
-/* Team Container */
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Team Card */
-.team-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    max-width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Team Images */
-.team-img {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #ff416c;
-}
-
-.team-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Team Member Details */
-.team-card h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.team-card h4 {
-    font-size: 16px;
-    color: #ff416c;
-    margin-bottom: 10px;
-}
-
-.team-card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+    /* Team Container */
     .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Team Card */
+    .team-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      max-width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Team Images */
+    .team-img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ff416c;
+    }
+
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Team Member Details */
+    .team-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .team-card h4 {
+      font-size: 16px;
+      color: #ff416c;
+      margin-bottom: 10px;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .team-container {
         flex-direction: column;
         align-items: center;
+      }
     }
-}
-</style>
+  </style>
+</head>
+<body>
 
+  <!-- Team Section -->
+  <section class="team">
+    <h1>Our Team</h1>
+    <p>Meet the creative and dedicated minds behind Cate’s Branding.</p>
+    <div class="team-container" id="teamContainer">
+      <!-- Team cards will be injected by JS -->
+    </div>
+  </section>
+
+  <script>
+    const teamData = [
+      {
+        role: "CEO",
+        name: "Sizolwethu Lukhele",
+        image: "folder/good.jpg",
+        description: "Sizolwethu Lukhele leads our team in branding."
+      },
+      {
+        role: "Managing Director",
+        name: "Mcebo Sfundza",
+        image: "folder/good.jpg",
+        description: "Mcebo Sfundza drives innovative marketing strategies for growth."
+      },
+      {
+        role: "IT Specialist",
+        name: "Welcome Mdluli",
+        image: "folder/good.jpg",
+        description: "Welcome ensures top-notch digital solutions and security."
+      },
+      {
+        role: "IT Specialist",
+        name: "Mbongiseni Masiimula",
+        image: "folder/good.jpg",
+        description: "Mbongiseni ensures top-notch digital solutions and security."
+      },
+      {
+        role: "Designer",
+        name: "Luhlelolwenkhosi Mnisi",
+        image: "folder/good.jpg",
+        description: "Luhlelolwenkhosi turns ideas into stunning visual masterpieces."
+      },
+      {
+        role: "Designer",
+        name: "Takhona Magongo",
+        image: "folder/good.jpg",
+        description: "Takhona turns ideas into stunning visual masterpieces."
+      },
+      {
+        role: "Public Relations",
+        name: "Sizolwethu Lukhele",
+        image: "folder/good.jpg",
+        description: "Sizolwethu manages communication and brand reputation."
+      }
+    ];
+
+    const container = document.getElementById("teamContainer");
+
+    teamData.forEach(member => {
+      container.innerHTML += `
+        <div class="team-card">
+          <div class="team-img">
+            <img src="${member.image}" alt="${member.name}">
+          </div>
+          <h3>${member.name}</h3>
+          <h4>${member.role}</h4>
+          <p>${member.description}</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
 
     <!-- Footer Section -->
     <style>
