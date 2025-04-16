@@ -427,33 +427,135 @@ nav {
     </section>
 
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <?php
-            $services = [
-                ["Brand Identity & Design", "We craft legendary visual assets that capture your story and set you apart.", "🎨"],
-                ["Comprehensive Brand Strategy", "Data-driven market positioning to ensure your brand dominates every platform.", "📊"],
-                ["Event & Campaign Branding", "We design materials that turn your products into the talk of the town.", "🎤"],
-                ["Reputation Management", "We turn crises into opportunities, strengthening your brand’s integrity.", "🛡️"],
-                ["Web & App Development", "We create responsive websites and game-changing apps for SMEs and enterprises.", "💻"],
-                ["Cybersecurity & Data Management", "Robust security solutions to protect your valuable digital assets.", "🔐"],
-                ["Visual Content Design", "We create social media graphics, infographics, and investor-ready proposals.", "🖼️"],
-                ["Motion Graphics & Animation", "Engaging 2D/3D animations for brand storytelling and explainer videos.", "🎞️"]
-            ];
-            foreach ($services as $service) {
-                echo "
-                <div class='service-card'>
-                    <div class='icon'>{$service[2]}</div>
-                    <h3>{$service[0]}</h3>
-                    <p>{$service[1]}</p>
-                </div>
-                ";
-            }
-            ?>
-        </div>
-    </section>
+   <!-- Services Section -->
+    <style>
+.services {
+  padding: 60px 20px;
+  background: #121212;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ff416c;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+}
+
+.service-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ff416c;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #555;
+}
+        
+    </style>
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="icon">🎨</div>
+      <h3>Brand Identity & Design</h3>
+      <p>We craft legendary visual assets that capture your story and set you apart.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">📊</div>
+      <h3>Comprehensive Brand Strategy</h3>
+      <p>Data-driven market positioning to ensure your brand dominates every platform.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🎤</div>
+      <h3>Event & Campaign Branding</h3>
+      <p>We design materials that turn your products into the talk of the town.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🛡️</div>
+      <h3>Reputation Management</h3>
+      <p>We turn crises into opportunities, strengthening your brand’s integrity.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">💻</div>
+      <h3>Web & App Development</h3>
+      <p>We create responsive websites and game-changing apps for SMEs and enterprises.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🔐</div>
+      <h3>Cybersecurity & Data Management</h3>
+      <p>Robust security solutions to protect your valuable digital assets.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🖼️</div>
+      <h3>Visual Content Design</h3>
+      <p>We create social media graphics, infographics, and investor-ready proposals.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🎞️</div>
+      <h3>Motion Graphics & Animation</h3>
+      <p>Engaging 2D/3D animations for brand storytelling and explainer videos.</p>
+    </div>
+  </div>
+</section>
+    <script>
+  const cards = document.querySelectorAll('.service-card');
+
+  window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.style.opacity = 1;
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  // Set initial styles
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(40px)';
+    card.style.transition = 'all 0.8s ease';
+  });
+</script>
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
