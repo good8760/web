@@ -155,26 +155,21 @@
     </div><br><br>
 
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <style>
-    .menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-    padding-right: 20px;
-}
-
-@media (max-width: 768px) {
+   @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto;
+        padding-right: 20px;
     }
 
     .navbar ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: gold;
+        background-color: blue; /* matches your navbar */
         position: absolute;
         top: 60px;
         left: 0;
@@ -186,21 +181,22 @@
     }
 
     .navbar ul li {
-        margin: 10px 0;
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar ul li a {
+        color: white;
+        font-size: 18px;
         text-align: left;
-        padding-left: 20px;
     }
 
     .dropdown-content {
         position: static;
+        background-color: #0051ba; /* deeper blue for nested items */
         box-shadow: none;
-        background-color: #ffa07a;
-        padding: 5px 0;
     }
-    .navbar {
-    background-color: blue; /* Or #333 or any color */
-    z-index: 1000;
-}
 
     .dropdown-content a {
         color: white;
@@ -215,14 +211,14 @@
     }
 }
 </style>
-    <script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const navMenu = document.querySelector('.navbar ul');
-  const dropdown = document.querySelector('.dropdown');
+   <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navbar ul');
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+
 
   dropdown.addEventListener('click', (e) => {
     e.stopPropagation(); // prevent bubbling
