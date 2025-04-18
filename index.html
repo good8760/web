@@ -154,6 +154,84 @@
         </ul>
     </div><br><br>
 
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    .menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #ffa07a;
+        padding: 5px 0;
+    }
+
+    .dropdown-content a {
+        color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+}
+
+    <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('.navbar ul');
+  const dropdown = document.querySelector('.dropdown');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent bubbling
+    dropdown.classList.toggle('active');
+  });
+
+  // Optional: close nav on link click (mobile)
+  document.querySelectorAll('.navbar ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  });
+</script>
+
 <div class="container1">
     <h1 style="font-size:40px; font-family: Comic Sans">WELCOME TO CATE'S BRANDING</h1>
     <h2 style="font-family: Comic Sans">"✨We craft unforgettable brand experiences✨."</h2>
