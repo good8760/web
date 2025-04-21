@@ -6,265 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team | Cate’s Branding</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #1a1a2e;
-            color: #fff;
-        }
-
-        header1 {
-            background: #000080;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .logo img {
-            width: 100px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .nav-area {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-area li {
-            margin: 0 15px;
-            position: relative;
-        }
-
-        .nav-area li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 12px;
-            transition: 0.3s ease;
-        }
-
-        .nav-area .dropdown {
-            display: none;
-            position: absolute;
-            background: white;
-            min-width: 150px;
-            top: 30px;
-            left: 0;
-            border-radius: 5px;
-        }
-
-        .nav-area li:hover .dropdown {
-            display: block;
-        }
-
-        .dropdown li {
-            padding: 10px;
-        }
-
-        .dropdown li a {
-            color: #ff416c;
-        }
-
-        .nav-area li a:hover {
-            background: white;
-            color: #ff416c;
-            border-radius: 20px;
-        }
-
-        .hero-text {
-            margin-top: 50px;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .hero-text p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #ff416c;
-            padding: 10px 20px;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: 0.3s ease;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            background: #ff416c;
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .services {
-            padding: 50px;
-            text-align: center;
-            background: #121212;
-        }
-
-        .services h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: black;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card .icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            color: #ff416c;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            color: #555;
-        }
+    
 
         @media (max-width: 768px) {
             .services-container {
                 grid-template-columns: 1fr;
             }
 
-            .nav-area {
-                flex-direction: column;
-            }
-
-            .nav-area li {
-                margin-bottom: 10px;
-            }
-        }
-
-        header {
-            text-align: center;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 20px;
-        }
-
-        .team {
-            background: #f8f9fa;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .team h1 {
-            font-size: 36px;
-            color: #ff416c;
-            margin-bottom: 10px;
-        }
-
-        .team p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: #555;
-        }
-
-        .team-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 20px;
-            max-width: 250px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .team-img {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #ff416c;
-        }
-
-        .team-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .team-card h3 {
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .team-card h4 {
-            font-size: 16px;
-            color: #ff416c;
-            margin-bottom: 10px;
-        }
-
-        .team-card p {
-            font-size: 14px;
-            color: #666;
-        }
+            
 
         @media (max-width: 768px) {
             .team-container {
@@ -387,6 +136,76 @@
 
     </header>
     <style>
+        <style>
+/* Contact Section */
+.contact {
+    background: #f8f9fa;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #ff416c;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    background: #ff416c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #e6004c;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+}
+</style>
+   
  
 
 /* Header */
