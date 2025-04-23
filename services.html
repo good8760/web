@@ -1,11 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cate’s Branding Websites</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Cate’s Branding</title>
+  <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
         .container { text-align: center; padding: 20px; }
         .container1 { text-align: center; padding: 30px; position: relative; }
@@ -154,175 +153,155 @@
         </ul>
     </div><br><br>
 
-       
-    </header1>
-     <style>
-      
- .services {
-  padding: 60px 20px;
-  background: #121212;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #ff416c;
-}
-
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: white;
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  text-align: center;
-  color: #333;
-}
-
-.service-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
-}
-
-.service-card .icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #ff416c;
-}
-
-.service-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #1a1a2e;
-}
-
-.service-card p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .services-container {
-        grid-template-columns: 1fr;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-}
 
-        
-    </style>
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .services-header {
+      background: #000080;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .services-header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .services-header p {
+      font-size: 18px;
+    }
+
+    .services-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: #000080;
+      color: white;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      color: #000080;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover h3 {
+      color: #FFDB58;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .service-card:hover p {
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .services-header h1 {
+        font-size: 28px;
+      }
+
+      .service-card {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
 <body>
 
-    <header>
-        <h1>Cate’s Branding Services</h1>
-    </header>
- 
-<!-- Services Section -->
-<section class="services">
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-card">
-      <div class="icon">🎨</div>
-      <h3>Brand Identity & Design</h3>
-      <p>We craft legendary visual assets that capture your story and set you apart.</p>
+  <!-- Header -->
+  <header class="services-header">
+    <h1>Our Strategic Services</h1>
+    <p>Empowering your brand with tailored business strategies</p>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="services-grid" id="servicesGrid">
+      <!-- Cards will be inserted by JavaScript -->
     </div>
+  </section>
 
-    <div class="service-card">
-      <div class="icon">📊</div>
-      <h3>Comprehensive Brand Strategy</h3>
-      <p>Data-driven market positioning to ensure your brand dominates every platform.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🎤</div>
-      <h3>Event & Campaign Branding</h3>
-      <p>We design materials that turn your products into the talk of the town.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🛡️</div>
-      <h3>Reputation Management</h3>
-      <p>We turn crises into opportunities, strengthening your brand’s integrity.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">💻</div>
-      <h3>Web & App Development</h3>
-      <p>We create responsive websites and game-changing apps for SMEs and enterprises.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🔐</div>
-      <h3>Cybersecurity & Data Management</h3>
-      <p>Robust security solutions to protect your valuable digital assets.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🖼️</div>
-      <h3>Visual Content Design</h3>
-      <p>We create social media graphics, infographics, and investor-ready proposals.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🎞️</div>
-      <h3>Motion Graphics & Animation</h3>
-      <p>Engaging 2D/3D animations for brand storytelling and explainer videos.</p>
-    </div>
-  </div>
-</section>
-
-</body>
-    <script>
-  const cards = document.querySelectorAll('.service-card');
-
-  window.addEventListener('scroll', () => {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    cards.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
-      if (cardTop < triggerBottom) {
-        card.style.opacity = 1;
-        card.style.transform = 'translateY(0)';
+  <!-- JavaScript to load service cards -->
+  <script>
+    const services = [
+      {
+        title: "Graphic Designing & Brand Development",
+        description: "Crafting compelling visual identities and brand strategies that build trust and establish market presence."
+      },
+      {
+        title: "Market Entry & Expansion Strategy",
+        description: "Tailored strategies that facilitate successful entry into new markets and drive growth in current ones."
+      },
+      {
+        title: "Sales Strategy & Process Optimisation",
+        description: "Improving sales strategies and streamlining processes to boost revenue and customer engagement."
+      },
+      {
+        title: "Partnership & Collaboration Development",
+        description: "Building strategic alliances and partnerships to unlock mutual business opportunities."
+      },
+      {
+        title: "Investment Readiness & Funding Guidance",
+        description: "Helping businesses attract investors with preparation, strategy, and funding acquisition support."
+      },
+      {
+        title: "Performance Monitoring & Growth Strategy",
+        description: "Using KPIs and analytics to track success and implement sustainable business growth plans."
       }
+    ];
+
+    const grid = document.getElementById("servicesGrid");
+
+    services.forEach(service => {
+      const card = document.createElement("div");
+      card.className = "service-card";
+      card.innerHTML = `
+        <h3>${service.title}</h3>
+        <p>${service.description}</p>
+      `;
+      grid.appendChild(card);
     });
-  });
-
-  // Set initial styles
-  cards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateY(40px)';
-    card.style.transition = 'all 0.8s ease';
-  });
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll(".service-card");
-
-    cards.forEach(card => {
-        card.addEventListener("mouseenter", function() {
-            card.style.backgroundColor = "#1a1a2e";
-            card.style.color = "#fff";
-        });
-
-        card.addEventListener("mouseleave", function() {
-            card.style.backgroundColor = "#fff";
-            card.style.color = "#333";
-        });
-    });
-});
-
-
-</script>
-
-    
+  </script>
+  
+   
     <!-- Footer Section -->
     <style>
         footer {
@@ -438,3 +417,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <p class="footer-bottom">&copy; 2025 Cate’s Branding. All Rights Reserved.</p>
     </footer>
+
+</body>
+</html>
