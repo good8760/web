@@ -335,31 +335,136 @@
 
     <div class="contact-container">
         <h2>Contact Cate’s Branding</h2>
-        <form id="contactForm" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <div class="error-message" id="nameError"></div>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <div class="error-message" id="emailError"></div>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <div class="error-message" id="messageError"></div>
-            </div>
-            <button type="submit">Send Message</button>
-            <div class="success-message" id="successMessage" style="display:none;">Your message has been sent successfully!</div>
-            <div class="error-message" id="submissionError" style="display:none; color: red;">There was an error sending your message. Please try again later.</div>
-        </form>
-    </div>
+        .contact-container {
+    max-width: 600px;
+    margin: 100px auto 50px;
+    padding: 30px;
+    background-color: #fffaf0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000080;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    background-color: #000080;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4169e1;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+✅ Completed JavaScript Logic
+Add this at the bottom before </body>, replacing the broken script:
+
+html
+Copy
+Edit
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('successMessage');
+    const submissionError = document.getElementById('submissionError');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Reset messages
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+        successMessage.style.display = 'none';
+        submissionError.style.display = 'none';
+
+        let isValid = true;
+
+        // Validate Name
+        if (nameInput.value.trim() === '') {
+            nameError.textContent = 'Please enter your name.';
+            isValid = false;
+        }
+
+        // Validate Email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
+
+        // Validate Message
+        if (messageInput.value.trim() === '') {
+            messageError.textContent = 'Please enter your message.';
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Simulate submission (use actual backend/email script in production)
+            setTimeout(() => {
+                form.reset();
+                successMessage.style.display = 'block';
+            }, 500);
+        } else {
+            submissionError.style.display = 'block';
+        }
+    });
+});
+</script>
 
          <style>
         footer {
