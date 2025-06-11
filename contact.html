@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crave Crust</title>
+    <title>Contact us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Eras+Demi+ITC&display=swap" rel="stylesheet">
@@ -335,132 +335,151 @@
 
     <div class="contact-container">
         <h2>Contact Cate’s Branding</h2>
-        <style>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
         .contact-container {
-    max-width: 600px;
-    margin: 100px auto 50px;
-    padding: 30px;
-    background-color: #fffaf0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000080;
-}
-
-.contact-form .form-group {
-    margin-bottom: 15px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #000080;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form button {
-    display: block;
-    width: 100%;
-    background-color: #000080;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #4169e1;
-}
-
-.success-message {
-    color: green;
-    margin-top: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const messageError = document.getElementById('messageError');
-    const successMessage = document.getElementById('successMessage');
-    const submissionError = document.getElementById('submissionError');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Reset messages
-        nameError.textContent = '';
-        emailError.textContent = '';
-        messageError.textContent = '';
-        successMessage.style.display = 'none';
-        submissionError.style.display = 'none';
-
-        let isValid = true;
-
-        // Validate Name
-        if (nameInput.value.trim() === '') {
-            nameError.textContent = 'Please enter your name.';
-            isValid = false;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        // Validate Email
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailInput.value.trim())) {
-            emailError.textContent = 'Please enter a valid email address.';
-            isValid = false;
+        .contact-container h2 {
+            color: #000080;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        // Validate Message
-        if (messageInput.value.trim() === '') {
-            messageError.textContent = 'Please enter your message.';
-            isValid = false;
+        .contact-form .form-group {
+            margin-bottom: 20px;
         }
 
-        if (isValid) {
-            // Simulate submission (use actual backend/email script in production)
-            setTimeout(() => {
-                form.reset();
-                successMessage.style.display = 'block';
-            }, 500);
-        } else {
-            submissionError.style.display = 'block';
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 8px;
+            font-size: 16px;
         }
-    });
-});
-</script>
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #000080;
+            box-shadow: 0 0 8px rgba(0, 0, 128, 0.3);
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #FF6347;
+            transform: scale(1.05);
+        }
+
+        .success-message,
+        .error-message {
+            margin-top: 10px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .success-message {
+            color: green;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+                <div class="error-message" id="surnameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="error-message" id="messageError"></div>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <div class="success-message" id="successMessage">Your message has been sent!</div>
+            <div class="error-message" id="submissionError">Something went wrong. Please try again.</div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const submissionError = document.getElementById('submissionError');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Simulate sending (replace this with real logic or server request)
+                setTimeout(() => {
+                    successMessage.style.display = 'block';
+                    submissionError.style.display = 'none';
+
+                    form.reset();
+
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                }, 1000);
+            });
+        });
+    </script>
 
          <style>
         footer {
